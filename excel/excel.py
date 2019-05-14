@@ -32,7 +32,7 @@ nCols1 = table1.ncols
 # print("%d" % nCols1)
 
 colsTable = []
-for num1 in range(4):
+for num1 in range(nCols1):
     colsTable.append(table1.col_values(num1))
 # print("%s" % colsTable)
 
@@ -70,6 +70,14 @@ for num2 in range(nRows1):
 # 将第4列的数据填入新建文档
 for num2 in range(nRows1):
     sheet.write(num2+8, 1, colsTable[3][num2])
+
+# 将第5列的数据填入新建文档
+for num2 in range(nRows1):
+    sheet.write(num2+8, 4, colsTable[4][num2])
+
+# 将第6列的数据填入新建文档
+for num2 in range(nRows1):
+    sheet.write(num2+8, 6, colsTable[5][num2])
 
 print("请输入保存路径：")
 url = input('>')
